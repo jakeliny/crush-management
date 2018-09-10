@@ -1,0 +1,45 @@
+{
+  "name": "crush-management",
+  "version": "1.0.0",
+  "description": "API criada para gerenciar os CRUSHs",
+  "main": "server.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "NODE_ENV=development nodemon ./node_modules/.bin/ts-node ./server/server.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jakeliny/crush-management.git"
+  },
+  "keywords": [
+    "API",
+    "NODEJS",
+    "TYPESCRIPT",
+    "EXPRESS",
+    "ES6",
+    "MONGODB"
+  ],
+  "author": "Jakeliny Gracielly",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jakeliny/crush-management/issues"
+  },
+  "homepage": "https://github.com/jakeliny/crush-management#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "http-status": "^1.2.0",
+    "mongoose": "^5.2.14",
+    "morgan": "^1.9.0"
+  },
+  "devDependencies": {
+    "@types/body-parser": "^1.17.0",
+    "@types/express": "^4.16.0",
+    "@types/http-status": "^0.2.30",
+    "@types/mongoose": "^5.2.11",
+    "@types/morgan": "^1.7.35",
+    "@types/node": "^10.9.4",
+    "ts-node": "^7.0.1",
+    "typescript": "^3.0.3"
+  }
+}
