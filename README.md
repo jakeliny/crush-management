@@ -17,4 +17,7 @@ Para instalar esse projeto depois de ter clonado aqui do github vá ao terminal 
 $ npm i
 
 E para start rode:
-npm run start
+npm run start-dev
+
+Ambiente de produção: https://crush-manegement.herokuapp.com/
+
