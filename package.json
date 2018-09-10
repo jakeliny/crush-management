@@ -5,7 +5,8 @@
   "main": "server.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "NODE_ENV=development nodemon ./node_modules/.bin/ts-node ./server/server.ts"
+    "start": "node ./build/server.js",
+    "start-dev": "NODE_ENV=development nodemon ./node_modules/.bin/ts-node ./server/server.ts"
   },
   "repository": {
     "type": "git",
@@ -30,7 +31,8 @@
     "express": "^4.16.3",
     "http-status": "^1.2.0",
     "mongoose": "^5.2.14",
-    "morgan": "^1.9.0"
+    "morgan": "^1.9.0",
+    "nodemon": "^1.18.4"
   },
   "devDependencies": {
     "@types/body-parser": "^1.17.0",

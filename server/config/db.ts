@@ -7,8 +7,13 @@ class DataBase{
     constructor(){}
 
     createConnection(){
-        mongoose.connect(this.DB_URI);
-        this.logger(this.DB_URI);
+        if(process.env.NODE_ENV == 'production'){
+            mongoose.connect(process.env.MONGODB_URI);
+            this.logger(process.env.MONGODB_URI);
+        }else{
+            mongoose.connect(this.DB_URI);
+            this.logger(this.DB_URI);
+        }
     }
 
     logger(uri){
