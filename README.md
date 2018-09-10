@@ -19,5 +19,5 @@ $ npm i
 E para start rode:
 npm run start-dev
 
-Ambiente de produção: https://crush-manegement.herokuapp.com/
+Ambiente de produção: https://crush-management.herokuapp.com/
 
