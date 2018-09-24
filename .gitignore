@@ -62,3 +62,4 @@ typings/
 
 #docker
 docker-config/*
+!docker-config/.gitkeep
