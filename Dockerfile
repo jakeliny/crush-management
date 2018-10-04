@@ -5,7 +5,7 @@ LABEL version="1.0"
 
 WORKDIR /var/www/app
 
-COPY . .
+COPY . ./
 
 EXPOSE 3000
 

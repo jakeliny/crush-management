@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node ./build/server.js",
-    "start-dev": "NODE_ENV=development nodemon ./node_modules/.bin/ts-node ./server/server.ts"
+    "start-dev": "NODE_ENV=development nodemon -L ./node_modules/.bin/ts-node ./server/server.ts"
   },
   "repository": {
     "type": "git",
@@ -28,6 +28,7 @@
   "homepage": "https://github.com/jakeliny/crush-management#readme",
   "dependencies": {
     "body-parser": "^1.18.3",
+    "dotenv": "^6.0.0",
     "express": "^4.16.3",
     "http-status": "^1.2.0",
     "mongoose": "^5.2.14",
