@@ -59,3 +59,10 @@ typings/
 
 # next.js build output
 .next
+
+#docker
+docker-config/*
+!docker-config/.gitkeep
+
+#env
+.env

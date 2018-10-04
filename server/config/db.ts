@@ -1,34 +1,38 @@
 import * as mongoose from 'mongoose';
 
-class DataBase{
-    private DB_URI = 'mongodb://127.0.0.1/crush-manegement';
-    private DB_CONNECTION;
+class DataBase {
+  private DB_CONNECTION;
 
-    constructor(){}
+  constructor() {}
 
-    createConnection(){
-        if(process.env.NODE_ENV == 'production'){
-            mongoose.connect(process.env.MONGODB_URI);
-            this.logger(process.env.MONGODB_URI);
-        }else{
-            mongoose.connect(this.DB_URI);
-            this.logger(this.DB_URI);
-        }
-    }
+  createConnection() {
+    mongoose.connect(process.env.DB_URI, {
+      user: process.env.DB_USER,
+      pass: process.env.DB_PASSWORD
+    });
 
-    logger(uri){
-        this.DB_CONNECTION = mongoose.connection;
-        this.DB_CONNECTION.on('connected', () => console.log("Mongoose está conectado ao " + uri));
-        this.DB_CONNECTION.on('error', error => console.error.bind(console, 'Erro na conexão: ' + error));
-        this.DB_CONNECTION.on('disconnected', () => console.log("Mongoose está desconectado do " + uri));
-    }
+    this.logger(process.env.DB_URI);
+  }
 
-    closeConnection(message, callback){
-        this.DB_CONNECTION.close(() =>{
-            console.log('Mongoose foi desconectado pelo: ' + message);
-            callback();
-        })
-    }
+  logger(uri) {
+    this.DB_CONNECTION = mongoose.connection;
+    this.DB_CONNECTION.on('connected', () =>
+      console.log('Mongoose está conectado ao ' + uri),
+    );
+    this.DB_CONNECTION.on('error', error =>
+      console.error.bind(console, 'Erro na conexão: ' + error),
+    );
+    this.DB_CONNECTION.on('disconnected', () =>
+      console.log('Mongoose está desconectado do ' + uri),
+    );
+  }
+
+  closeConnection(message, callback) {
+    this.DB_CONNECTION.close(() => {
+      console.log('Mongoose foi desconectado pelo: ' + message);
+      callback();
+    });
+  }
 }
 
 export default DataBase;
