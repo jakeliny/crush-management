@@ -1,22 +1,47 @@
-# crush-management
+# Crush Management
 API criada em NodeJS para gerenciar os Crushs
 
-Roteiro: http://bit.ly/2NpjcbY
+Este projeto está disponível em https://crush-management.herokuapp.com/
 
-Tenha instalado em seu computador
-NodeJS
-NPM
-TypeScript
-MongoDB
-Postman
+# Roteiro
+http://bit.ly/2NpjcbY
 
-Para instalar esse projeto depois de ter clonado aqui do github vá ao terminal entre na pasta do projeto e de o comando: 
+# Requisitos
+- [NodeJS](https://nodejs.org/en/)
+- [NPM](https://nodejs.org/en/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [MongoDB](https://www.mongodb.com/)
+- [Postman](https://www.getpostman.com/)
 
+# Instalação
+
+Execute os seguintes comandos em um terminal:
+
+```
+git clone https://github.com/jakeliny/crush-management.git
+```
+
+```
+cd crush-managment
+```
+
+```
 npm i
+```
 
-E para start rode:
+# Para rodar o projeto
 
+Utilize o comando: 
+
+```
 npm start-dev
+```
 
-Ambiente de produção: https://crush-management.herokuapp.com/
+# Docker
+
+Este projeto está disponível para rodar com docker, para isso, utilize o seguinte comando:
+
+```
+docker-compose up
+```
 
