@@ -4,6 +4,7 @@ import * as bodyParser from 'body-parser';
 import DataBase from './config/db';
 import CrushRoutes from './modules/crush/routes';
 import * as dotenv from 'dotenv';
+import * as cors from 'cors';
 
 class App {
   public app: express.Application;
@@ -30,6 +31,7 @@ class App {
   }
 
   middleware() {
+    this.app.use(cors())
     this.app.use(morgan('dev'));
     this.app.use(bodyParser.json());
     this.app.use(bodyParser.urlencoded({ extended: true }));
