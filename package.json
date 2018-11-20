@@ -28,7 +28,6 @@
   "homepage": "https://github.com/jakeliny/crush-management#readme",
   "dependencies": {
     "body-parser": "^1.18.3",
-    "cors": "^2.8.4",
     "dotenv": "^6.0.0",
     "express": "^4.16.3",
     "http-status": "^1.2.0",
@@ -38,7 +37,6 @@
   },
   "devDependencies": {
     "@types/body-parser": "^1.17.0",
-    "@types/cors": "^2.8.4",
     "@types/express": "^4.16.0",
     "@types/http-status": "^0.2.30",
     "@types/mongoose": "^5.2.11",

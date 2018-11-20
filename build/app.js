@@ -6,7 +6,6 @@ var bodyParser = require("body-parser");
 var db_1 = require("./config/db");
 var routes_1 = require("./modules/crush/routes");
 var dotenv = require("dotenv");
-// import * as cors from 'cors';
 var App = /** @class */ (function () {
     function App() {
         dotenv.config();
@@ -23,7 +22,6 @@ var App = /** @class */ (function () {
         this.database.closeConnection(message, function () { return callback(); });
     };
     App.prototype.middleware = function () {
-        // this.app.use(cors());
         this.app.use(morgan('dev'));
         this.app.use(bodyParser.json());
         this.app.use(bodyParser.urlencoded({ extended: true }));
