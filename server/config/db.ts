@@ -6,11 +6,7 @@ class DataBase {
   constructor() {}
 
   createConnection() {
-    mongoose.connect(process.env.DB_URI, {
-      user: process.env.DB_USER,
-      pass: process.env.DB_PASSWORD,
-      useNewUrlParser: true,
-    });
+    mongoose.connect(process.env.DB_URI);
 
     this.logger(process.env.DB_URI);
   }
