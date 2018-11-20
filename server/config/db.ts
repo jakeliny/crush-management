@@ -1,18 +1,23 @@
 import * as mongoose from 'mongoose';
 
 class DataBase {
+
   private DB_CONNECTION;
 
-  constructor() {}
+  constructor() { }
 
   createConnection() {
-    mongoose.connect(process.env.DB_URI, {
-      user: process.env.DB_USER,
-      pass: process.env.DB_PASSWORD,
-      useNewUrlParser: true,
-    });
 
-    this.logger(process.env.DB_URI);
+    //dentro do heroku meu node_env é production
+    if (process.env.NODE_ENV == 'production') {
+      mongoose.connect(process.env.MONGODB_URI);
+      this.logger(process.env.MONGODB_URI);
+    }
+    else {
+      mongoose.connect(process.env.DB_URI);
+      this.logger(process.env.DB_URI);
+
+    }
   }
 
   logger(uri) {
