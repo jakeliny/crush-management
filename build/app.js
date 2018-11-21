@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+var cors = require("cors");
 var express = require("express");
 var morgan = require("morgan");
 var bodyParser = require("body-parser");
@@ -22,6 +23,7 @@ var App = /** @class */ (function () {
         this.database.closeConnection(message, function () { return callback(); });
     };
     App.prototype.middleware = function () {
+        this.app.use(cors());
         this.app.use(morgan('dev'));
         this.app.use(bodyParser.json());
         this.app.use(bodyParser.urlencoded({ extended: true }));

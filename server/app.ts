@@ -1,3 +1,4 @@
+import * as cors from 'cors';
 import * as express from 'express';
 import * as morgan from 'morgan';
 import * as bodyParser from 'body-parser';
@@ -30,6 +31,7 @@ class App {
   }
 
   middleware() {
+    this.app.use(cors());
     this.app.use(morgan('dev'));
     this.app.use(bodyParser.json());
     this.app.use(bodyParser.urlencoded({ extended: true }));
