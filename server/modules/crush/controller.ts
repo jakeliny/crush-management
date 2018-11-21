@@ -21,8 +21,14 @@ class CrushController {
             apelido: crush.apelido,
             whatsapp: crush.whatsapp,
             observacoes: crush.observacoes,
+            comoconheceu: crush.comoconheceu,
+            idade: crush.idade,
+            altura: crush.altura,
+            local: crush.local,
             foto: crush.foto,
-            nota: crush.nota
+            nota: crush.nota, 
+            notaresponsabilidade: crush.notaresponsabilidade,
+            notaatitude: crush.notaatitude
         }
         return Crush.findByIdAndUpdate(id, updateCrush);
     }
